@@ -21,6 +21,9 @@
     UITableView *userTableView;
     
     MenuTabViewController *tabBarController;
+    
+    NSString *userName;
+    NSString *password;
 }
 
 @end
@@ -139,14 +142,17 @@
         }
     }
     
-//    UIWindow *window = XAppDelegate.window;
-//
-//    [UIView transitionWithView:window duration:1.0 options:UIViewAnimationOptionTransitionCurlUp animations:^{[window setRootViewController:tabBarController];} completion:^(BOOL finished) {
-//        
-//    }];
-    
+    if ([userName isEqualToString:@"admin"]&&[password isEqualToString:@"admin"])
+    {
+        [self performSegueWithIdentifier:@"Signin" sender:self];
+    }
+    else
+    {
+        NSLog(@"登录失败！！！");
+    }
     
 }
+
 - (IBAction)cleanUp:(id)sender
 {
     self.tfPsw.text = nil;
@@ -291,8 +297,7 @@
 {
 //    MenuTabViewController *tabViewC = [segue destinationViewController];
     
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
 }
 
 @end

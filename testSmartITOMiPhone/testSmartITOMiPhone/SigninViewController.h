@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BIDAppDelegate.h"
 #import "MenuTabViewController.h"
-// 获取全局 App 实例
-#define XAppDelegate ((BIDAppDelegate *)[[UIApplication sharedApplication] delegate])
 
 
 @interface SigninViewController : UIViewController<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>
@@ -24,7 +22,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *tfPsw;
 
 @property (strong, nonatomic) IBOutlet UIButton *btnUserHistory;
+
 @property (strong, nonatomic) IBOutlet UIButton *btnSignin;
+
 @property (strong, nonatomic) IBOutlet UIButton *btnCleanUp;
 
 

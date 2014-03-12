@@ -10,7 +10,7 @@
 
 @implementation BIDAppDelegate
 
-@synthesize tabBarController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

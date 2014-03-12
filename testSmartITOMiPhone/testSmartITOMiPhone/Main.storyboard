@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Signin View Controller-->
@@ -73,7 +73,6 @@
                                 </state>
                                 <connections>
                                     <action selector="willSignin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="56y-6Q-Dkf"/>
-                                    <segue destination="gA7-Zs-ziK" kind="modal" id="cAA-L1-hO9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx2-AG-rKc">
@@ -112,6 +111,7 @@
                         <outlet property="logo" destination="UUJ-NZ-tUH" id="Juq-YU-BFu"/>
                         <outlet property="tfPsw" destination="rKJ-m4-Nry" id="qVy-Xh-nO9"/>
                         <outlet property="tfUserName" destination="dvs-Mm-wYk" id="UaF-me-4fY"/>
+                        <segue destination="gA7-Zs-ziK" kind="modal" identifier="SiginIn" id="SXk-sL-1mY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

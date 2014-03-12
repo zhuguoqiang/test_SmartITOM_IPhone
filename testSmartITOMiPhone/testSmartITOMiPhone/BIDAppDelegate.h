@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MenuTabViewController.h"
+
 
 @interface BIDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong,nonatomic) MenuTabViewController *tabBarController;
 
 @end
