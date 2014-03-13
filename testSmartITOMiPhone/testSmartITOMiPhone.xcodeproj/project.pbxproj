@@ -22,6 +22,10 @@
 		728E4E4818C6FEBB0065CD54 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E4E4718C6FEBB0065CD54 /* AlarmViewController.m */; };
 		728E4E4B18C701310065CD54 /* ItsmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E4E4A18C701310065CD54 /* ItsmTableViewController.m */; };
 		728E4E4E18C702C00065CD54 /* ItsmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E4E4D18C702C00065CD54 /* ItsmCell.m */; };
+		72AC11E918D156B5007891B9 /* SBCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AC11E418D156B5007891B9 /* SBCEViewController.m */; };
+		72AC11EA18D156B5007891B9 /* NSMutableArray+TTMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AC11E618D156B5007891B9 /* NSMutableArray+TTMutableArray.m */; };
+		72AC11EB18D156B5007891B9 /* SimpleBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AC11E818D156B5007891B9 /* SimpleBarChart.m */; };
+		72AC11FC18D18C5A007891B9 /* SecondMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AC11FB18D18C5A007891B9 /* SecondMessageTableViewCell.m */; };
 		72CEC05A18CD6354002B5B12 /* alarm_lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CEC05818CD6354002B5B12 /* alarm_lamp.png */; };
 		72CEC05B18CD6354002B5B12 /* alarm_lamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CEC05918CD6354002B5B12 /* alarm_lamp@2x.png */; };
 		72CEC05E18CD63C3002B5B12 /* AttentionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CEC05D18CD63C3002B5B12 /* AttentionTableViewCell.m */; };
@@ -107,6 +111,14 @@
 		728E4E4A18C701310065CD54 /* ItsmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItsmTableViewController.m; sourceTree = "<group>"; };
 		728E4E4C18C702C00065CD54 /* ItsmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItsmCell.h; sourceTree = "<group>"; };
 		728E4E4D18C702C00065CD54 /* ItsmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItsmCell.m; sourceTree = "<group>"; };
+		72AC11E318D156B5007891B9 /* SBCEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCEViewController.h; sourceTree = "<group>"; };
+		72AC11E418D156B5007891B9 /* SBCEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCEViewController.m; sourceTree = "<group>"; };
+		72AC11E518D156B5007891B9 /* NSMutableArray+TTMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+TTMutableArray.h"; sourceTree = "<group>"; };
+		72AC11E618D156B5007891B9 /* NSMutableArray+TTMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TTMutableArray.m"; sourceTree = "<group>"; };
+		72AC11E718D156B5007891B9 /* SimpleBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBarChart.h; sourceTree = "<group>"; };
+		72AC11E818D156B5007891B9 /* SimpleBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBarChart.m; sourceTree = "<group>"; };
+		72AC11FA18D18C5A007891B9 /* SecondMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondMessageTableViewCell.h; sourceTree = "<group>"; };
+		72AC11FB18D18C5A007891B9 /* SecondMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondMessageTableViewCell.m; sourceTree = "<group>"; };
 		72CEC05818CD6354002B5B12 /* alarm_lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_lamp.png; sourceTree = "<group>"; };
 		72CEC05918CD6354002B5B12 /* alarm_lamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm_lamp@2x.png"; sourceTree = "<group>"; };
 		72CEC05C18CD63C3002B5B12 /* AttentionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionTableViewCell.h; sourceTree = "<group>"; };
@@ -200,6 +212,7 @@
 				4A613AEB18BAEDDB007FE944 /* testSmartITOMiPhoneTests */,
 				4A613AC518BAEDDB007FE944 /* Frameworks */,
 				4A613AC418BAEDDB007FE944 /* Products */,
+				72AC11E218D15658007891B9 /* SBCEViewController */,
 				728E4E4218C6C7190065CD54 /* All kinds of detail Controllers */,
 				72F16B0918C5CC5F00B53B7E /* All kinds of Cell */,
 				72F16B0818C5CC5800B53B7E /* UIViews */,
@@ -294,6 +307,19 @@
 			name = "All kinds of detail Controllers";
 			sourceTree = "<group>";
 		};
+		72AC11E218D15658007891B9 /* SBCEViewController */ = {
+			isa = PBXGroup;
+			children = (
+				72AC11E318D156B5007891B9 /* SBCEViewController.h */,
+				72AC11E418D156B5007891B9 /* SBCEViewController.m */,
+				72AC11E518D156B5007891B9 /* NSMutableArray+TTMutableArray.h */,
+				72AC11E618D156B5007891B9 /* NSMutableArray+TTMutableArray.m */,
+				72AC11E718D156B5007891B9 /* SimpleBarChart.h */,
+				72AC11E818D156B5007891B9 /* SimpleBarChart.m */,
+			);
+			name = SBCEViewController;
+			sourceTree = "<group>";
+		};
 		72F16B0718C5CC4800B53B7E /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +383,8 @@
 				728E4E4D18C702C00065CD54 /* ItsmCell.m */,
 				72CEC05C18CD63C3002B5B12 /* AttentionTableViewCell.h */,
 				72CEC05D18CD63C3002B5B12 /* AttentionTableViewCell.m */,
+				72AC11FA18D18C5A007891B9 /* SecondMessageTableViewCell.h */,
+				72AC11FB18D18C5A007891B9 /* SecondMessageTableViewCell.m */,
 			);
 			name = "All kinds of Cell";
 			sourceTree = "<group>";
@@ -501,13 +529,17 @@
 				72F16B2C18C5D1EC00B53B7E /* BIDAppDelegate.m in Sources */,
 				72F16B3518C5D1FA00B53B7E /* MessageTableViewCell.m in Sources */,
 				72F16B3818C5D20D00B53B7E /* LineChartView.m in Sources */,
+				72AC11FC18D18C5A007891B9 /* SecondMessageTableViewCell.m in Sources */,
+				72AC11EB18D156B5007891B9 /* SimpleBarChart.m in Sources */,
 				728E4E4E18C702C00065CD54 /* ItsmCell.m in Sources */,
 				72CEC06118CD92BE002B5B12 /* AddAttentionViewController.m in Sources */,
 				72F16B2F18C5D1EC00B53B7E /* MessageTableViewController.m in Sources */,
 				72F16B3118C5D1EC00B53B7E /* SettingTableViewController.m in Sources */,
 				72F16B2E18C5D1EC00B53B7E /* MenuTabViewController.m in Sources */,
+				72AC11EA18D156B5007891B9 /* NSMutableArray+TTMutableArray.m in Sources */,
 				728E4E4518C6C7610065CD54 /* HostViewController.m in Sources */,
 				728E4E4B18C701310065CD54 /* ItsmTableViewController.m in Sources */,
+				72AC11E918D156B5007891B9 /* SBCEViewController.m in Sources */,
 				72CEC05E18CD63C3002B5B12 /* AttentionTableViewCell.m in Sources */,
 				4A613AD318BAEDDB007FE944 /* main.m in Sources */,
 				72F16B3018C5D1EC00B53B7E /* AttentionTableViewController.m in Sources */,

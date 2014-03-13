@@ -11,6 +11,7 @@
 #import "MessageTableViewCell.h"
 #import "HostViewController.h"
 #import "AlarmViewController.h"
+#import "SecondMessageTableViewCell.h"
 
 @class cell;
 
@@ -142,12 +143,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return views.count;
+    return views.count+1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"MessageTableViewCell";
+    static NSString *SecondCellIdentifier = @"SecondMessageTableViewCell";
+
+    if (indexPath.row < views.count)
+    {
+
     MessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     
@@ -164,8 +170,14 @@
     [cell.chartView addSubview:[views objectAtIndex:indexPath.row]];
 //    [cell.imageView setImage:[UIImage imageNamed:@"liuyifei.jpg"]];
     [cell.imageView setImage:[UIImage imageNamed:@"user@2x.png"]];
-    
+        
     return cell;
+    }
+    else
+    {
+        SecondMessageTableViewCell *secondMessageTableViewCell = [tableView dequeueReusableCellWithIdentifier:SecondCellIdentifier];
+        return secondMessageTableViewCell;
+    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -183,6 +195,15 @@
         [self performSegueWithIdentifier:@"itsm" sender:self];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 3)
+    {
+        return 126;
+    }
+    else
+        return 526;
+}
 
 #pragma mark - Navigation
 

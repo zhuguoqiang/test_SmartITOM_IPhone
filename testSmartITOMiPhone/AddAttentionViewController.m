@@ -127,6 +127,15 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.delegate setValue:[mArr2 objectAtIndex:indexPath.row]];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"通知" message:[NSString stringWithFormat:@"You have add %@",[self.mArr2 objectAtIndex:indexPath.row]] delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    [alert show];
+    
+}
+
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.mSearchBar resignFirstResponder];
+    return indexPath;
 }
 
 ////设置表尾标题

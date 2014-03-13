@@ -142,9 +142,9 @@
         }
     }
     
-    if ([userName isEqualToString:@"admin"]&&[password isEqualToString:@"admin"])
+    if ([tfUserName.text isEqualToString:@"admin"]&&[tfPsw.text isEqualToString:@"admin"])
     {
-        [self performSegueWithIdentifier:@"Signin" sender:self];
+        [self performSegueWithIdentifier:@"SiginIn" sender:self];
     }
     else
     {
@@ -226,7 +226,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text = @"sym";
+    cell.textLabel.text = @"admin";
     return cell;
 }
 
@@ -239,7 +239,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.tfUserName.text = @"sym";
+    self.tfUserName.text = @"admin";
     [UIView animateWithDuration:0.4
                      animations:^{
                          userTableView.frame = CGRectMake(522, 521, 319, 0);
@@ -265,8 +265,7 @@
     
     CGRect validTouchArea1 = imageVRmbPsw.frame;
     if (CGRectContainsPoint(validTouchArea1, point))
-    {
-        remember = !remember;
+    {        remember = !remember;
         [self refreshCheckBox:imageVRmbPsw andCheck:remember];
     }
 }

@@ -36,6 +36,10 @@
     
     device = [[NSMutableArray alloc] initWithObjects:@"思科路由器MD131",@"联想主机E49",@"MySql",@"iMac",@"IBM服务器", nil];
     report = [[NSMutableArray alloc] initWithObjects:@"Mem Top10",@"Cpu Top10"@"告警 Top10", nil];
+    
+    
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"删除" style:UIBarButtonItemStylePlain target:self action:@selector(deleteSomething:)];
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
 
 }
 
@@ -109,37 +113,67 @@
     return YES;
 }
 
+- (void) deleteSomething:(id)send
+{
+    [self.tableView setEditing:!self.tableView.editing animated:YES];
+    if (self.tableView.editing)
+    {
+        [self.navigationItem.leftBarButtonItem setTitle:@"完成"];
+    }
+    else
+    {
+        [self.navigationItem.leftBarButtonItem setTitle:@"删除"];
+    }
+}
 
-/*
-// Override to support editing the table view.
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    
+    [device removeObjectAtIndex:indexPath.row];
+    
+    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
-*/
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1)
+    {
+        [self performSegueWithIdentifier:@"FirstSection" sender:self];
+    }
+    else if (indexPath.section == 0)
+    {
+        [self performSegueWithIdentifier:@"SecondSection" sender:self];
+    }
+}
 
 /*
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleNone;
+}
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    NSInteger fromRow = fromIndexPath.row;
+    NSInteger toRow = toIndexPath.row;
+    
+    id object = [device objectAtIndex:fromRow];
+    [device removeObjectAtIndex:fromRow];
+    [device insertObject:object atIndex:toRow];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
+
+
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
 
+*/
 
 #pragma mark - Navigation
 
@@ -172,5 +206,6 @@
     [self.tableView reloadData];
 //    NSLog(@"done");
 }
+
 
 @end
