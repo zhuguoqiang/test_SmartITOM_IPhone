@@ -14,11 +14,13 @@
 
 @implementation AddAttentionViewController
 
+
 @synthesize mArr1;
 @synthesize mArr2;
 @synthesize mTableView;
 @synthesize pMtableView;
 @synthesize mSearchBar;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -87,7 +89,7 @@
     return 20;
 }
 
-#pragma mark UITableView Delegate
+#pragma mark - UITableView Delegate
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -144,7 +146,7 @@
 //    return @"Footer";
 //}
 
-#pragma mark -UISearcherBar Delegate
+#pragma mark - UISearcherBar Delegate
 //在搜索框内搜索内容，并展示搜索结果
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {

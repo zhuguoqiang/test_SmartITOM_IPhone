@@ -9,6 +9,10 @@
 #import "SettingTableViewController.h"
 
 @interface SettingTableViewController ()
+{
+    NSMutableArray *firstSection;
+    NSMutableArray *secondSection;
+}
 
 @end
 
@@ -26,14 +30,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    firstSection = [[NSMutableArray alloc] initWithObjects:@"Shell工具",@"SQL",@"telnet",@"设置", nil];
+    
+    secondSection = [[NSMutableArray alloc] initWithObjects:@"意见反馈",@"关于我们", nil];
+    
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -44,26 +46,92 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    if (section == 0)
+    {
+        return firstSection.count;
+    }
+    else
+    {
+    return secondSection.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    // Configure the cell...
+    if (indexPath.section == 0)
+    {
+        cell.textLabel.text = [firstSection objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        cell.textLabel.text = [secondSection objectAtIndex:indexPath.row];
+    }
+    
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:30];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+}
+
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0)
+    {
+        return @"   ";
+    }
+    else
+    {;
+        return @"   ";
+    }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 126;
+    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 40;
+    }
+    else
+    {
+        return 150;
+    }
+}
+
+#pragma mark - tableview Delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0 && indexPath.row == 0)
+    {
+        [self performSegueWithIdentifier:@"ShellTool" sender:self];
+    }
+    if (indexPath.section == 0 && indexPath.row == 2)
+    {
+        [self performSegueWithIdentifier:@"TelnetTool" sender:self];
+    }
+    
 }
 
 /*
@@ -105,16 +173,34 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"ShellTool"])
+    {
+        UIViewController *viewController = (UIViewController *)segue.destinationViewController;
+//        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 400, 400)];
+//        [viewController.view addSubview:view];
+        UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 65, 400, 400)];
+        textView.text = @"SSH:ipad@10.10.152.18";
+        textView.font = [UIFont boldSystemFontOfSize:30];
+        [viewController.view addSubview:textView];
+        
+    }
+    if ([segue.identifier isEqualToString:@"TelnetTool"])
+    {
+        UIViewController *viewController = (UIViewController *)segue.destinationViewController;
+        UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 65, 400, 400)];
+        textView.text = @"telnet 61.152.158.132.23";
+        textView.font = [UIFont boldSystemFontOfSize:30];
+        [viewController.view addSubview:textView];
+        
+    }
+
 }
 
- */
 
 @end
