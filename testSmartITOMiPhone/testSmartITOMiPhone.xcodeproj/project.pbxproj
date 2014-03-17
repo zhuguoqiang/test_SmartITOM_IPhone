@@ -18,6 +18,15 @@
 		4A613AE818BAEDDB007FE944 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A613ACA18BAEDDB007FE944 /* UIKit.framework */; };
 		4A613AF018BAEDDB007FE944 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A613AEE18BAEDDB007FE944 /* InfoPlist.strings */; };
 		4A613AF218BAEDDB007FE944 /* testSmartITOMiPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A613AF118BAEDDB007FE944 /* testSmartITOMiPhoneTests.m */; };
+		723F761918D6D00900724CD5 /* SQLToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723F761818D6D00900724CD5 /* SQLToolViewController.m */; };
+		723F761C18D6DD4400724CD5 /* SettingToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723F761B18D6DD4400724CD5 /* SettingToolViewController.m */; };
+		723F761F18D6E60B00724CD5 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723F761E18D6E60B00724CD5 /* FeedbackViewController.m */; };
+		723F762218D6E62400724CD5 /* DetailFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723F762118D6E62400724CD5 /* DetailFeedbackViewController.m */; };
+		723F762518D6F47900724CD5 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723F762418D6F47900724CD5 /* AboutUsViewController.m */; };
+		723F762A18D6F67D00724CD5 /* turnright_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 723F762618D6F67D00724CD5 /* turnright_active.png */; };
+		723F762B18D6F67D00724CD5 /* turnright_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 723F762718D6F67D00724CD5 /* turnright_active@2x.png */; };
+		723F762C18D6F67D00724CD5 /* turnright_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 723F762818D6F67D00724CD5 /* turnright_normal.png */; };
+		723F762D18D6F67D00724CD5 /* turnright_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 723F762918D6F67D00724CD5 /* turnright_normal@2x.png */; };
 		728E4E4518C6C7610065CD54 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E4E4418C6C7610065CD54 /* HostViewController.m */; };
 		728E4E4818C6FEBB0065CD54 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E4E4718C6FEBB0065CD54 /* AlarmViewController.m */; };
 		728E4E4B18C701310065CD54 /* ItsmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E4E4A18C701310065CD54 /* ItsmTableViewController.m */; };
@@ -103,6 +112,20 @@
 		4A613AED18BAEDDB007FE944 /* testSmartITOMiPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testSmartITOMiPhoneTests-Info.plist"; sourceTree = "<group>"; };
 		4A613AEF18BAEDDB007FE944 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A613AF118BAEDDB007FE944 /* testSmartITOMiPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testSmartITOMiPhoneTests.m; sourceTree = "<group>"; };
+		723F761718D6D00900724CD5 /* SQLToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLToolViewController.h; sourceTree = "<group>"; };
+		723F761818D6D00900724CD5 /* SQLToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLToolViewController.m; sourceTree = "<group>"; };
+		723F761A18D6DD4400724CD5 /* SettingToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingToolViewController.h; sourceTree = "<group>"; };
+		723F761B18D6DD4400724CD5 /* SettingToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingToolViewController.m; sourceTree = "<group>"; };
+		723F761D18D6E60B00724CD5 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		723F761E18D6E60B00724CD5 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		723F762018D6E62400724CD5 /* DetailFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailFeedbackViewController.h; sourceTree = "<group>"; };
+		723F762118D6E62400724CD5 /* DetailFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailFeedbackViewController.m; sourceTree = "<group>"; };
+		723F762318D6F47900724CD5 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		723F762418D6F47900724CD5 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		723F762618D6F67D00724CD5 /* turnright_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turnright_active.png; sourceTree = "<group>"; };
+		723F762718D6F67D00724CD5 /* turnright_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turnright_active@2x.png"; sourceTree = "<group>"; };
+		723F762818D6F67D00724CD5 /* turnright_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turnright_normal.png; sourceTree = "<group>"; };
+		723F762918D6F67D00724CD5 /* turnright_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turnright_normal@2x.png"; sourceTree = "<group>"; };
 		728E4E4318C6C7610065CD54 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
 		728E4E4418C6C7610065CD54 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
 		728E4E4618C6FEBB0065CD54 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
@@ -303,6 +326,16 @@
 				728E4E4A18C701310065CD54 /* ItsmTableViewController.m */,
 				72CEC05F18CD92BE002B5B12 /* AddAttentionViewController.h */,
 				72CEC06018CD92BE002B5B12 /* AddAttentionViewController.m */,
+				723F761718D6D00900724CD5 /* SQLToolViewController.h */,
+				723F761818D6D00900724CD5 /* SQLToolViewController.m */,
+				723F761A18D6DD4400724CD5 /* SettingToolViewController.h */,
+				723F761B18D6DD4400724CD5 /* SettingToolViewController.m */,
+				723F761D18D6E60B00724CD5 /* FeedbackViewController.h */,
+				723F761E18D6E60B00724CD5 /* FeedbackViewController.m */,
+				723F762018D6E62400724CD5 /* DetailFeedbackViewController.h */,
+				723F762118D6E62400724CD5 /* DetailFeedbackViewController.m */,
+				723F762318D6F47900724CD5 /* AboutUsViewController.h */,
+				723F762418D6F47900724CD5 /* AboutUsViewController.m */,
 			);
 			name = "All kinds of detail Controllers";
 			sourceTree = "<group>";
@@ -323,6 +356,10 @@
 		72F16B0718C5CC4800B53B7E /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				723F762618D6F67D00724CD5 /* turnright_active.png */,
+				723F762718D6F67D00724CD5 /* turnright_active@2x.png */,
+				723F762818D6F67D00724CD5 /* turnright_normal.png */,
+				723F762918D6F67D00724CD5 /* turnright_normal@2x.png */,
 				72CEC05818CD6354002B5B12 /* alarm_lamp.png */,
 				72CEC05918CD6354002B5B12 /* alarm_lamp@2x.png */,
 				72F16B3918C5D22200B53B7E /* user@2x.png */,
@@ -472,6 +509,7 @@
 				72F16B5F18C5D22200B53B7E /* menu_setting_highlight@2x.png in Resources */,
 				72F16B7B18C5D22200B53B7E /* list_background@2x.png in Resources */,
 				72F16B7218C5D22200B53B7E /* checkbox_unchecked.png in Resources */,
+				723F762D18D6F67D00724CD5 /* turnright_normal@2x.png in Resources */,
 				72F16B6118C5D22200B53B7E /* menu_setting_normal@2x.png in Resources */,
 				72F16B6918C5D22200B53B7E /* menu_message_normal@2x.png in Resources */,
 				72CEC05A18CD6354002B5B12 /* alarm_lamp.png in Resources */,
@@ -486,6 +524,7 @@
 				72F16B6E18C5D22200B53B7E /* btn_signin_active.png in Resources */,
 				72F16B7F18C5D22200B53B7E /* logo.png in Resources */,
 				72F16B6518C5D22200B53B7E /* marked_normal@2x.png in Resources */,
+				723F762C18D6F67D00724CD5 /* turnright_normal.png in Resources */,
 				72F16ABC18C5CC0000B53B7E /* liuyifei.jpg in Resources */,
 				72F16B6018C5D22200B53B7E /* menu_setting_normal.png in Resources */,
 				72F16B6218C5D22200B53B7E /* marked_highlight.png in Resources */,
@@ -501,7 +540,9 @@
 				72F16B7118C5D22200B53B7E /* btn_signin_normal@2x.png in Resources */,
 				72F16B7A18C5D22200B53B7E /* list_background.png in Resources */,
 				72F16B6C18C5D22200B53B7E /* btn_clean_normal.png in Resources */,
+				723F762A18D6F67D00724CD5 /* turnright_active.png in Resources */,
 				72F16B7D18C5D22200B53B7E /* window_bg.png in Resources */,
+				723F762B18D6F67D00724CD5 /* turnright_active@2x.png in Resources */,
 				72F16B6B18C5D22200B53B7E /* btn_clean_active@2x.png in Resources */,
 				72CEC05B18CD6354002B5B12 /* alarm_lamp@2x.png in Resources */,
 				72F16B8018C5D22200B53B7E /* logo@2x.png in Resources */,
@@ -530,8 +571,11 @@
 				72F16B3518C5D1FA00B53B7E /* MessageTableViewCell.m in Sources */,
 				72F16B3818C5D20D00B53B7E /* LineChartView.m in Sources */,
 				72AC11FC18D18C5A007891B9 /* SecondMessageTableViewCell.m in Sources */,
+				723F761F18D6E60B00724CD5 /* FeedbackViewController.m in Sources */,
 				72AC11EB18D156B5007891B9 /* SimpleBarChart.m in Sources */,
 				728E4E4E18C702C00065CD54 /* ItsmCell.m in Sources */,
+				723F761918D6D00900724CD5 /* SQLToolViewController.m in Sources */,
+				723F761C18D6DD4400724CD5 /* SettingToolViewController.m in Sources */,
 				72CEC06118CD92BE002B5B12 /* AddAttentionViewController.m in Sources */,
 				72F16B2F18C5D1EC00B53B7E /* MessageTableViewController.m in Sources */,
 				72F16B3118C5D1EC00B53B7E /* SettingTableViewController.m in Sources */,
@@ -540,7 +584,9 @@
 				728E4E4518C6C7610065CD54 /* HostViewController.m in Sources */,
 				728E4E4B18C701310065CD54 /* ItsmTableViewController.m in Sources */,
 				72AC11E918D156B5007891B9 /* SBCEViewController.m in Sources */,
+				723F762218D6E62400724CD5 /* DetailFeedbackViewController.m in Sources */,
 				72CEC05E18CD63C3002B5B12 /* AttentionTableViewCell.m in Sources */,
+				723F762518D6F47900724CD5 /* AboutUsViewController.m in Sources */,
 				4A613AD318BAEDDB007FE944 /* main.m in Sources */,
 				72F16B3018C5D1EC00B53B7E /* AttentionTableViewController.m in Sources */,
 				72F16B2D18C5D1EC00B53B7E /* SigninViewController.m in Sources */,

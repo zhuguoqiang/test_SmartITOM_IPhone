@@ -127,9 +127,25 @@
     {
         [self performSegueWithIdentifier:@"ShellTool" sender:self];
     }
+    if (indexPath.section == 0 && indexPath.row == 1)
+    {
+        [self performSegueWithIdentifier:@"SQLTool" sender:self];
+    }
     if (indexPath.section == 0 && indexPath.row == 2)
     {
         [self performSegueWithIdentifier:@"TelnetTool" sender:self];
+    }
+    if (indexPath.section == 0 && indexPath.row == 3)
+    {
+        [self performSegueWithIdentifier:@"SettingTool" sender:self];
+    }
+    if (indexPath.section == 1 && indexPath.row == 0)
+    {
+        [self performSegueWithIdentifier:@"FeedbackTool" sender:self];
+    }
+    if (indexPath.section == 1 && indexPath.row == 1)
+    {
+        [self performSegueWithIdentifier:@"AboutUs" sender:self];
     }
     
 }
