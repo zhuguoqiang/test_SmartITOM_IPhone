@@ -115,7 +115,7 @@
     }
     else
     {
-        return 150;
+        return 130;
     }
 }
 
