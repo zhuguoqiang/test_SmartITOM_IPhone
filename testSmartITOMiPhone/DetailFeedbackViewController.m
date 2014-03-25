@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
 	self.label.text = self.labelText;
+    self.label.textColor = [UIColor redColor];
+    self.label.adjustsFontSizeToFitWidth = YES;
+    self.label.lineBreakMode = NSLineBreakByCharWrapping;
+    self.label.numberOfLines = 0;
     UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"已收到反馈意见" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [view show];
 }

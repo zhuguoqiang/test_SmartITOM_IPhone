@@ -83,26 +83,37 @@
 {
     self.webView.hidden = YES;
     self.navigationItem.rightBarButtonItem = nil;
+    
+    //每次加载webview的时候，上次加载的内容清空
+    NSURLRequest *request  = [NSURLRequest requestWithURL:[NSURL URLWithString:@"about:blank"]];
+    [self.webView loadRequest:request];
+
 }
 
 #pragma mark - WebView Delegate
 
 -(void)webViewDidStartLoad:(UIWebView *)webView
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 64.0f, 50.0f)];
     [view setTag:108];
     [view setAlpha:1];
+    [view setCenter:self.webView.center];
     [self.webView addSubview:view];
     
     activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)];
     
-    [activityIndicator setCenter:self.webView.center];
+//    [activityIndicator setCenter:self.webView.center];
     
     [activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     
     activityIndicator.hidden = NO;
     
     [view addSubview:activityIndicator];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 32.0f, 64.0f, 18.0f)];
+    label.text = @"Loading";
+    
+    [view addSubview:label];
     
 //    NSLog(@"%@",activityIndicator);
 }
