@@ -9,6 +9,9 @@
 #import "SettingToolViewController.h"
 
 @interface SettingToolViewController ()
+{
+    NSUserDefaults *defaults;
+}
 
 @end
 
@@ -26,8 +29,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     
+    defaults = [NSUserDefaults standardUserDefaults];
+    
+    self.segment1.selectedSegmentIndex = [defaults boolForKey:@"firstSwitch"];
+    self.segment2.selectedSegmentIndex = [defaults boolForKey:@"secondSwitch"];
+    self.segment3.selectedSegmentIndex = [defaults boolForKey:@"thirdSwitch"];
+    self.segment4.selectedSegmentIndex = [defaults boolForKey:@"forthSwitch"];
+    self.segment5.selectedSegmentIndex = [defaults boolForKey:@"fifthSwitch"];
+    self.segment6.selectedSegmentIndex = [defaults boolForKey:@"sixthSwitch"];
+    self.segment7.selectedSegmentIndex = [defaults boolForKey:@"seventhSwitch"];
+    self.segment8.selectedSegmentIndex = [defaults boolForKey:@"eighthSwitch"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +60,9 @@
     {
         self.label.text = @"Off button";
     }
+    [defaults setBool:control.selectedSegmentIndex forKey:@"firstSwitch"];
+    [defaults synchronize];
+    
 }
 - (IBAction)change1:(id)sender
 {
@@ -60,6 +75,8 @@
     {
         self.label2.text = @"Off button";
     }
+    [defaults setBool:control.selectedSegmentIndex forKey:@"secondSwitch"];
+    [defaults synchronize];
 
 }
 - (IBAction)change2:(id)sender
@@ -73,6 +90,9 @@
     {
         self.label3.text = @"Off button";
     }
+    [defaults setBool:control.selectedSegmentIndex forKey:@"thirdSwitch"];
+    [defaults synchronize];
+
 
 }
 - (IBAction)change3:(id)sender
@@ -86,6 +106,9 @@
     {
         self.label4.text = @"Off button";
     }
+    [defaults setBool:control.selectedSegmentIndex forKey:@"forthSwitch"];
+    [defaults synchronize];
+
 
 }
 - (IBAction)change4:(id)sender
@@ -99,6 +122,9 @@
     {
         self.label5.text = @"Off button";
     }
+    [defaults setBool:control.selectedSegmentIndex forKey:@"fifthSwitch"];
+    [defaults synchronize];
+
 
 }
 - (IBAction)change5:(id)sender
@@ -112,6 +138,9 @@
     {
         self.label6.text = @"Off button";
     }
+    [defaults setBool:control.selectedSegmentIndex forKey:@"sixthSwitch"];
+    [defaults synchronize];
+
 
 }
 - (IBAction)change6:(id)sender
@@ -125,6 +154,9 @@
     {
         self.label7.text = @"Off button";
     }
+    [defaults setBool:control.selectedSegmentIndex forKey:@"seventhSwitch"];
+    [defaults synchronize];
+
 
 }
 - (IBAction)change7:(id)sender
@@ -138,6 +170,9 @@
     {
         self.label9.text = @"Off button";
     }
+    [defaults setBool:control.selectedSegmentIndex forKey:@"eighthSwitch"];
+    [defaults synchronize];
+
 
 }
 

@@ -35,6 +35,7 @@
 		724916A518E00B4100434125 /* ELineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 7249169F18E00B4100434125 /* ELineChart.m */; };
 		724916A618E00B4100434125 /* ELineChartDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 724916A118E00B4100434125 /* ELineChartDataModel.m */; };
 		724916A718E00B4100434125 /* ELine.m in Sources */ = {isa = PBXBuildFile; fileRef = 724916A318E00B4100434125 /* ELine.m */; };
+		728BF9DF18E25EE200AD7A78 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 728BF9DE18E25EE200AD7A78 /* Settings.bundle */; };
 		728E4E4518C6C7610065CD54 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E4E4418C6C7610065CD54 /* HostViewController.m */; };
 		728E4E4818C6FEBB0065CD54 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E4E4718C6FEBB0065CD54 /* AlarmViewController.m */; };
 		728E4E4B18C701310065CD54 /* ItsmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E4E4A18C701310065CD54 /* ItsmTableViewController.m */; };
@@ -150,6 +151,7 @@
 		724916A118E00B4100434125 /* ELineChartDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELineChartDataModel.m; sourceTree = "<group>"; };
 		724916A218E00B4100434125 /* ELine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELine.h; sourceTree = "<group>"; };
 		724916A318E00B4100434125 /* ELine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELine.m; sourceTree = "<group>"; };
+		728BF9DE18E25EE200AD7A78 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		728E4E4318C6C7610065CD54 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
 		728E4E4418C6C7610065CD54 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
 		728E4E4618C6FEBB0065CD54 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				7249169B18E00B1300434125 /* ELine */,
 				72F16B0718C5CC4800B53B7E /* Image */,
 				72F16AB718C5CC0000B53B7E /* liuyifei.jpg */,
+				728BF9DE18E25EE200AD7A78 /* Settings.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -586,6 +589,7 @@
 				72F16B6A18C5D22200B53B7E /* btn_clean_active.png in Resources */,
 				72F16B6D18C5D22200B53B7E /* btn_clean_normal@2x.png in Resources */,
 				72F16B7918C5D22200B53B7E /* dropdown_active@2x.png in Resources */,
+				728BF9DF18E25EE200AD7A78 /* Settings.bundle in Resources */,
 				7243CC3118D7EC9F00E3F372 /* alarm.png in Resources */,
 				72F16B7818C5D22200B53B7E /* dropdown_active.png in Resources */,
 				72F16B7418C5D22200B53B7E /* checkbox_checked.png in Resources */,

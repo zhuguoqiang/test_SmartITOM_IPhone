@@ -113,6 +113,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 32.0f, 64.0f, 18.0f)];
     label.text = @"Loading";
     
+    
     [view addSubview:label];
     
 //    NSLog(@"%@",activityIndicator);

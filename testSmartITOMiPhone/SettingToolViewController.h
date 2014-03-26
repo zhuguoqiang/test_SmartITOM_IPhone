@@ -19,6 +19,15 @@
 @property (strong, nonatomic) IBOutlet UILabel *label7;
 @property (strong, nonatomic) IBOutlet UILabel *label9;
 
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segment1;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segment2;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segment3;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segment4;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segment5;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segment6;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segment7;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segment8;
+
 - (IBAction)change:(id)sender;
 
 @end
