@@ -8,6 +8,10 @@
 
 #import "SigninViewController.h"
 #import "MenuTabViewController.h"
+#import "User.h"
+
+#define kFilename           @"archieve"
+#define kDataKey            @"Data"
 
 @interface SigninViewController ()
 {
@@ -24,6 +28,8 @@
     
     NSString *userName;
     NSString *password;
+    
+
 }
 
 @end
@@ -89,7 +95,38 @@
     [self.view addSubview:userTableView];
     
     
-}
+    //记住密码
+    User *sUser = [[User alloc] init];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[self dataFilePath]])
+    {
+        NSData *data = [[NSMutableData alloc] initWithContentsOfFile:[self dataFilePath]];
+        NSKeyedUnarchiver *unarchiever = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+        sUser = [unarchiever decodeObjectForKey:kDataKey];
+        [unarchiever finishDecoding];
+    }
+    
+    tfUserName.text = sUser.userName;
+    tfPsw.text = sUser.userPsw;
+    
+
+    if (sUser.autoSignin)
+    {
+        [self refreshCheckBox:imageVAutoSignin andCheck:sUser.autoSignin];
+    }
+    else
+    {
+        [self refreshCheckBox:imageVAutoSignin andCheck:NO];
+    }
+    if (sUser.rememberable)
+    {
+        [self refreshCheckBox:imageVRmbPsw andCheck:sUser.rememberable];
+    }
+    else
+    {
+        [self refreshCheckBox:imageVRmbPsw andCheck:NO];
+    }
+
+ }
 
 - (void)didReceiveMemoryWarning
 {
@@ -145,6 +182,35 @@
     if ([tfUserName.text isEqualToString:@"admin"]&&[tfPsw.text isEqualToString:@"admin"])
     {
         [self performSegueWithIdentifier:@"SiginIn" sender:self];
+        
+        //保存sUser
+        User *sUser = [[User alloc] init];
+        if (remember)
+        {
+            sUser.rememberable = YES;
+            sUser.userPsw = tfPsw.text;
+        }
+        else
+        {
+            sUser.rememberable = NO;
+            sUser.userPsw = @"";
+        }
+        if (autoSignin)
+        {
+            sUser.autoSignin = YES;
+        }
+        else
+        {
+            sUser.autoSignin = NO;
+        }
+        sUser.userName = tfUserName.text;
+        
+        NSMutableData *data = [[NSMutableData alloc] init];
+        NSKeyedArchiver *archieve = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+        [archieve encodeObject:sUser forKey:kDataKey];
+        [archieve finishEncoding];
+        [data writeToFile:[self dataFilePath] atomically:YES];
+        
     }
     else
     {
@@ -266,8 +332,13 @@
     CGRect validTouchArea1 = imageVRmbPsw.frame;
     if (CGRectContainsPoint(validTouchArea1, point))
     {        remember = !remember;
+        if (remember == NO)
+        {
+            tfPsw.text = Nil;
+        }
         [self refreshCheckBox:imageVRmbPsw andCheck:remember];
     }
+
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -291,11 +362,22 @@
     return YES;
 }
 
+#pragma mark - prepareSegue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 
 {
 //    MenuTabViewController *tabViewC = [segue destinationViewController];
     
+    
+}
+
+#pragma mark -dataPath
+-(NSString *)dataFilePath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    
+    return [documentDirectory stringByAppendingPathComponent:kFilename];
     
 }
 

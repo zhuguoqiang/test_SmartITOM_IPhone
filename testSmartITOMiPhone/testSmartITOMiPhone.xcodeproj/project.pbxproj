@@ -46,6 +46,7 @@
 		72AC11EA18D156B5007891B9 /* NSMutableArray+TTMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AC11E618D156B5007891B9 /* NSMutableArray+TTMutableArray.m */; };
 		72AC11EB18D156B5007891B9 /* SimpleBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AC11E818D156B5007891B9 /* SimpleBarChart.m */; };
 		72AC11FC18D18C5A007891B9 /* SecondMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AC11FB18D18C5A007891B9 /* SecondMessageTableViewCell.m */; };
+		72C5DAE118E92E7000B94DC1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C5DAE018E92E7000B94DC1 /* User.m */; };
 		72CEC05A18CD6354002B5B12 /* alarm_lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CEC05818CD6354002B5B12 /* alarm_lamp.png */; };
 		72CEC05B18CD6354002B5B12 /* alarm_lamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CEC05918CD6354002B5B12 /* alarm_lamp@2x.png */; };
 		72CEC05E18CD63C3002B5B12 /* AttentionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CEC05D18CD63C3002B5B12 /* AttentionTableViewCell.m */; };
@@ -170,6 +171,8 @@
 		72AC11E818D156B5007891B9 /* SimpleBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBarChart.m; sourceTree = "<group>"; };
 		72AC11FA18D18C5A007891B9 /* SecondMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondMessageTableViewCell.h; sourceTree = "<group>"; };
 		72AC11FB18D18C5A007891B9 /* SecondMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondMessageTableViewCell.m; sourceTree = "<group>"; };
+		72C5DADF18E92E7000B94DC1 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		72C5DAE018E92E7000B94DC1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		72CEC05818CD6354002B5B12 /* alarm_lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_lamp.png; sourceTree = "<group>"; };
 		72CEC05918CD6354002B5B12 /* alarm_lamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm_lamp@2x.png"; sourceTree = "<group>"; };
 		72CEC05C18CD63C3002B5B12 /* AttentionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionTableViewCell.h; sourceTree = "<group>"; };
@@ -268,6 +271,7 @@
 				72F16B0918C5CC5F00B53B7E /* All kinds of Cell */,
 				72F16B0818C5CC5800B53B7E /* UIViews */,
 				7249169B18E00B1300434125 /* ELine */,
+				72C5DADE18E92E5700B94DC1 /* Model */,
 				72F16B0718C5CC4800B53B7E /* Image */,
 				72F16AB718C5CC0000B53B7E /* liuyifei.jpg */,
 				728BF9DE18E25EE200AD7A78 /* Settings.bundle */,
@@ -398,6 +402,15 @@
 				72AC11E818D156B5007891B9 /* SimpleBarChart.m */,
 			);
 			name = SBCEViewController;
+			sourceTree = "<group>";
+		};
+		72C5DADE18E92E5700B94DC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72C5DADF18E92E7000B94DC1 /* User.h */,
+				72C5DAE018E92E7000B94DC1 /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		72F16B0718C5CC4800B53B7E /* Image */ = {
@@ -635,6 +648,7 @@
 				728E4E4E18C702C00065CD54 /* ItsmCell.m in Sources */,
 				723F761918D6D00900724CD5 /* SQLToolViewController.m in Sources */,
 				723F761C18D6DD4400724CD5 /* SettingToolViewController.m in Sources */,
+				72C5DAE118E92E7000B94DC1 /* User.m in Sources */,
 				72CEC06118CD92BE002B5B12 /* AddAttentionViewController.m in Sources */,
 				72F16B2F18C5D1EC00B53B7E /* MessageTableViewController.m in Sources */,
 				72F16B3118C5D1EC00B53B7E /* SettingTableViewController.m in Sources */,
